@@ -1,11 +1,11 @@
-#container{
+#mainbtn_container{
     position: absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
 }
 
-button{
+#mainbtn_container #btnContainer button{
     display: block;
     width:200px;
     height:60px;
@@ -19,7 +19,7 @@ button{
 
     transition: all .5s;
 }
-button:hover{
+#mainbtn_container #btnContainer button:hover{
     background-color: white;
     color: #000000;
 }

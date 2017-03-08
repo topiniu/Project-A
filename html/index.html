@@ -4,15 +4,35 @@
     <meta charset="UTF-8">
     <title>Demo2</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/panel.css">
+    <script src="../js/clazz.js"></script>
     <script src="../js/index.js"></script>
 </head>
 <body>
-<div id="container">
-    <button id="addQuestion">Add question</button>
-    <button id="viewAll">View all question</button>
-    <button id="editQuestion">Edit question</button>
-    <button id="reset">Reset system</button>
+<div id="mainbtn_container">
+    <div id="btnContainer">
+        <button id="addQuestion">Add question</button>
+        <button id="viewAll">View all question</button>
+        <button id="editQuestion">Edit question</button>
+        <button id="reset">Reset system</button>
+    </div>
 </div>
 
+<div id="panelContainer">
+    <div id="addFnPanel">
+        <div id="mainBox">
+            <form id="form">
+                <div><p>Question:</p><textarea name="questionContent" placeholder="type your question here"></textarea></div>
+                <div><p>Answer A:</p><input type="text" class="answer" name="Answer_A" placeholder="here is answer A"> <input type="checkbox" name="rightAnswers"></div>
+            </form>
+
+            <div>
+                <button id="addAnswerBtn">add another answer</button>
+                <button id="saveQuestion">Save this</button>
+            </div>
+
+        </div>
+    </div>
+</div>
 </body>
 </html>
