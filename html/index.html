@@ -5,8 +5,10 @@
     <title>Demo2</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/panel.css">
+    <script src="../js/bindFn.js"></script>
     <script src="../js/clazz.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/mainfn.js"></script>
+    <script src="../js/animate.js"></script>
 </head>
 <body>
 <div id="mainbtn_container">
@@ -20,7 +22,14 @@
 
 <div id="panelContainer">
     <div id="addFnPanel">
-        <div id="topbar"><p>Type and save your question</p><span id="exitBtn"><a id="exitBtnA">X</a></span></div>
+        <div id="topbar">
+            <p>Type and save your question</p>
+            <span class="exitBtn">
+                <a class="i"></a>
+                <a class="i"></a>
+            </span>
+        </div>
+
         <div id="mainBox">
             <form id="form">
                 <div><p>Question:</p><textarea autofocus class="floatRight" name="questionContent" placeholder="type your question here"></textarea></div>
