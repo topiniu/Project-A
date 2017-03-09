@@ -29,7 +29,7 @@ function createAnotherAnswer(){
 
     var input = document.createElement("input");
     input.type = "text";
-    input.className = "answer";
+    input.className = "answer floatRight";
     input.name = "Answer_" + answerIndex;
     input.setAttribute("placeholder","here is answer " + answerIndex);
 
