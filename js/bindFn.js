@@ -15,6 +15,7 @@ window.onload = function() {
 
     //level C btn
     var c_exitBtns = document.getElementsByClassName("exitBtn");
+    var addBtn = document.getElementById("saveQuestion");
 
 
     if (document.addEventListener) {
@@ -28,7 +29,7 @@ window.onload = function() {
 
         //level B btn bind fn
         b_addABtn.addEventListener("click",function(e){
-            createAnotherAnswer();
+            createAnotherAnswer(-1);
             stopHandler(e);
         },false);
 
@@ -54,9 +55,9 @@ window.onload = function() {
                 stopHandler(e);
             },false);
         }
+        addBtn.addEventListener("click",addBtnClick,false);
 
-
-
+//*****************************************************************************************************8
     } else if (document.attachEvent) {//IE 8 or earlier
 
         //level A btn bind fn
@@ -68,7 +69,7 @@ window.onload = function() {
 
         //level B btn bind fn
         addAB.attachEvent("onclick",function (e) {
-            createAnotherAnswer();
+            createAnotherAnswer(-1);
             stopHandler(e);
         });
 
@@ -89,6 +90,7 @@ window.onload = function() {
             });
         }
 
+        addBtn.attachEvent("onclick",addBtnClick);
 
     }
 }

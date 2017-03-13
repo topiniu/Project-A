@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Demo2</title>
+    <title>Project A</title>
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/panel.css">
     <script src="../js/bindFn.js"></script>
     <script src="../js/clazz.js"></script>
     <script src="../js/mainfn.js"></script>
     <script src="../js/animate.js"></script>
+    <script src="../js/addQuestion.js"></script>
 </head>
 <body>
+<div id="messageBox">
+    <p id="messageBoxContent"></p>
+</div>
 <div id="mainbtn_container">
+
     <div id="btnContainer">
         <button id="addQuestion">Add question</button>
         <button id="viewAll">View all question</button>
@@ -32,8 +37,8 @@
 
         <div id="mainBox">
             <form id="form">
-                <div><p>Question:</p><textarea autofocus class="floatRight" name="questionContent" placeholder="type your question here"></textarea></div>
-                <div><p>Answer A:</p><input type="text" class="answer floatRight" name="Answer_A" placeholder="here is answer A"> <input type="checkbox" name="rightAnswers"></div>
+                <div><p>Question:</p><textarea id="questionContent" autofocus class="floatRight" name="questionContent" placeholder="type your question here"></textarea></div>
+                <div class="answerBox"><p>Answer A:</p><input type="text" class="answer floatRight" name="Answer_A" placeholder="here is answer A"> <input type="checkbox" value="A" name="rightAnswers"></div>
             </form>
 
             <div>

@@ -30,3 +30,16 @@ Question.prototype.editRightAnswers = function(rightAnswers){
     this._rightAnswers = rightAnswers;
 }
 
+Question.prototype.showSelf = function(){
+    console.log("Qusetion= " + this._content);
+
+    var a = 65;
+    for(var i=0;i<this._answers.length;i++){
+        console.log(String.fromCharCode(a++) + "  " + this._answers[i]);
+    }
+
+    console.log("\nRight answer:")
+    for(var i=0;i<this._rightAnswers.length;i++){
+        console.log(this._rightAnswers[i]);
+    }
+}

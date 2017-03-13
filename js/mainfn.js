@@ -1,8 +1,14 @@
 /**
  * Created by topiniu on 2017/3/8.
  */
+var QueationData = [];
+
 var createAnswerFlag = 66;//from B
-function createAnotherAnswer(){
+function createAnotherAnswer(index){
+    if(index!=-1){
+        createAnswerFlag = index;
+    }
+    // alert(createAnswerFlag+ "   " + index);
     var answerIndex = String.fromCharCode(createAnswerFlag++);
 
     var p = document.createElement("p");
@@ -16,9 +22,11 @@ function createAnotherAnswer(){
 
     var input_checkbox = document.createElement("input");
     input_checkbox.type = "checkbox";
+    input_checkbox.value = answerIndex;
     input_checkbox.name = "rightAnswers";
 
     var div = document.createElement("div");
+    div.className = "answerBox";
     div.appendChild(p);
     div.appendChild(input);
     div.appendChild(input_checkbox);
@@ -124,27 +132,15 @@ function hidePanel(exitBtn){
      window.event?window.event.cancelBubble=true:event.stopPropagation();
  }
 
-// var a = [];
-// a.push("2");
-// a.push("3");
-// a.push("4");
-//
-// var aa = "1+1=";
-//
-//
-// var qu = new Question(aa,a);
-// var i = qu.showAllAnswer();
-// showT();
-// var delindex = 'B';
-// qu.deleteAnswer(delindex.charCodeAt()-64);
-// showT();
-//
-//
-//
-// function showT(){
-//     console.log(qu._content);
-//     var ind = 65;
-//     for(x in i){
-//         console.log(String.fromCharCode(ind++) + ":  " + i[x]);
-//     }
-// }
+ function showMessage(content){
+     var p = document.getElementById("messageBoxContent");
+     p.innerHTML = content;
+
+     var showMessageBox = document.getElementById("messageBox");
+
+     showMessageBox.style.left = "0";
+
+     setTimeout(function(){
+         showMessageBox.style.left = "-100%";
+     },1800);
+ }
