@@ -38,6 +38,8 @@ function createAnotherAnswer(index){
 }
 
 
+//推出按钮的动画
+
 function changeExitBtn(i){
     console.log("i="+i);
     /*
