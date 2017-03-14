@@ -1,0 +1,60 @@
+#mainbtn_container{
+    display: none;
+}
+
+
+
+
+#mainContainer{
+    position: absolute;
+
+    width:850px;
+
+    left:50%;
+    margin-left:-425px;
+    top:50px;
+
+    /*text-align: center;*/
+
+    background-color: antiquewhite;
+}
+
+#mainContainer .questionItem{
+    width:60%;
+    background-color: cadetblue;
+
+    position: relative;
+    border:2px solid white;
+    left:50%;
+    transform: translate(-50%);
+    border-radius:10px;
+    height:80px;
+
+    transition: all .3s;
+}
+
+.clearfix{
+    overflow: auto;
+    zoom: 1;
+}
+
+#mainContainer .questionContent p{
+    margin:10px 10px 10px 10px;
+    font-size:20px;
+    color: white;
+}
+
+#mainContainer .questionItem .answersContainer{
+    overflow: hidden;
+}
+
+#mainContainer .questionItem .answersContainer .answerBlock{
+    overflow: hidden;
+}
+
+#mainContainer .questionItem .answersContainer .answerBlock p{
+    margin: 0;
+    display: inline;
+    float: left;
+    margin-right: 20px;
+}
