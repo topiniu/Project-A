@@ -4,9 +4,6 @@
 window.onload = function() {
     //level A btn
     var a_addQuestionBtn = document.getElementById("addQuestion");
-    var a_viewAllBtn = document.getElementById("viewAll");
-    var a_editQuestionBtn = document.getElementById("editQuestion");
-    var a_resetBtn = document.getElementById("reset");
 
 
     //level B btn
@@ -17,6 +14,7 @@ window.onload = function() {
     var c_exitBtns = document.getElementsByClassName("exitBtn");
     var addBtn = document.getElementById("saveQuestion");
 
+    var showAnswers = document.getElementsByClassName("showAnswers");
 
     if (document.addEventListener) {
 
@@ -56,6 +54,8 @@ window.onload = function() {
             },false);
         }
         addBtn.addEventListener("click",addBtnClick,false);
+
+
 
 //*****************************************************************************************************8
     } else if (document.attachEvent) {//IE 8 or earlier

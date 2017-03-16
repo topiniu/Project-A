@@ -11,6 +11,7 @@
     <script src="../js/mainfn.js"></script>
     <script src="../js/animate.js"></script>
     <script src="../js/addQuestion.js"></script>
+    <script src="../js/mainContainer.js"></script>
 </head>
 <body>
 <div id="messageBox">
@@ -21,30 +22,27 @@
     <div class="questionItemContainer">
         <div class="questionItem clearfix">
             <div class="questionContent clearfix">
-                <p class="questionText">
+                <div class="questionText">
+                    <p>
                     为什么我这么帅？为什么我这么帅？为什么我这么帅？
                     为什么我这么帅？为什么我这么帅？为什么我这么帅？为什么我这么帅？
-                </p>
-                <div class="showAnswersBtn">
-                    <button class="showAnswers" href="">show answers</button>
+                    </p>
+
+                    <div class="fnBtnContainer">
+                        <span class="editBtnContainer">
+                                <button class="editQuuestion">edit</button>
+                                <button class="delQuestion">del</button>
+                        </span>
+                    </div>
                 </div>
-
+                <div class="showAnswersBtn">
+                    <button class="showAnswers" onclick="showAnswerBtnClick(this)">show answers</button>
+                </div>
             </div>
-
-            <div class="fnBtnContainer">
-                <span class="editQuestionBtn">
-                    <a href="" class="editQuuestion"></a>
-                </span>
-
-                <span class="delQuestionBtn">
-                    <a href="" class="delQuestion"></a>
-                </span>
-            </div>
-
         </div>
         <div class="answersContainer clearfix">
             <div class="answerBlock clearfix"><p class="answerIndex"><span>A</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
-            <div class="answerBlock clearfix"><p class="answerIndex"><span>B</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+            <div class="answerBlock clearfix rightAnswer"><p class="answerIndex"><span>B</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
             <div class="answerBlock clearfix"><p class="answerIndex"><span>C</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
             <div class="answerBlock clearfix"><p class="answerIndex"><span>D</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
         </div>
