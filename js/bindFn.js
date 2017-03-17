@@ -14,8 +14,9 @@ window.onload = function() {
     var c_exitBtns = document.getElementsByClassName("exitBtn");
     var addBtn = document.getElementById("saveQuestion");
 
-    var showAnswers = document.getElementsByClassName("showAnswers");
+    // var textContainer = document.getElementsByClassName("textContainer");
 
+    //bind function
     if (document.addEventListener) {
 
         //level A btn bind fn
@@ -24,15 +25,11 @@ window.onload = function() {
             stopHandler(e);
         },false);
 
-
         //level B btn bind fn
         b_addABtn.addEventListener("click",function(e){
             createAnotherAnswer(-1);
             stopHandler(e);
         },false);
-
-
-
 
         //level C btn bind fn
         for(var i=0;i<c_exitBtns.length;i++){
@@ -55,7 +52,18 @@ window.onload = function() {
         }
         addBtn.addEventListener("click",addBtnClick,false);
 
-
+        // for(var i=0;i<textContainer.length;i++){
+        //     textContainer[i].addEventListener("mouseover",function(e){
+        //         // alert(0);
+        //         showEditPanel_toggle(this);
+        //         // stopHandler(e);
+        //     },false);
+        //
+        //     textContainer[i].addEventListener("mouseout",function(e){
+        //         showEditPanel_toggle(this);
+        //         // stopHandler(e);
+        //     },false);
+        // }
 
 //*****************************************************************************************************8
     } else if (document.attachEvent) {//IE 8 or earlier

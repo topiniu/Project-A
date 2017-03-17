@@ -23,12 +23,14 @@
         <div class="questionItem clearfix">
             <div class="questionContent clearfix">
                 <div class="questionText">
+                    <div class="textContainer" onmouseover="showEditPanel_toggle(this)"></div>
+
                     <p>
-                    为什么我这么帅？为什么我这么帅？为什么我这么帅？
-                    为什么我这么帅？为什么我这么帅？为什么我这么帅？为什么我这么帅？
+                        为什么我这么帅？为什么我这么帅？为什么我这么帅？
+                        为什么我这么帅？为什么我这么帅？为什么我这么帅？为什么我这么帅？
                     </p>
 
-                    <div class="fnBtnContainer">
+                    <div class="fnBtnContainer" onmouseleave="showEditPanel_toggle(this)">
                         <span class="editBtnContainer">
                                 <button class="editQuuestion">edit</button>
                                 <button class="delQuestion">del</button>
@@ -36,7 +38,7 @@
                     </div>
                 </div>
                 <div class="showAnswersBtn">
-                    <button class="showAnswers" onclick="showAnswerBtnClick(this)">show answers</button>
+                    <button class="showAnswers" onclick="showAnswerBtnClick_toggle(this)">show answers</button>
                 </div>
             </div>
         </div>
