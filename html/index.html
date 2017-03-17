@@ -6,12 +6,6 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/panel.css">
     <link rel="stylesheet" href="../css/mainContainer.css">
-    <script src="../js/bindFn.js"></script>
-    <script src="../js/clazz.js"></script>
-    <script src="../js/mainfn.js"></script>
-    <script src="../js/animate.js"></script>
-    <script src="../js/addQuestion.js"></script>
-    <script src="../js/mainContainer.js"></script>
 </head>
 <body>
 <div id="messageBox">
@@ -19,6 +13,66 @@
 </div>
 
 <div id="mainContainer">
+    <div class="questionItemContainer">
+        <div class="questionItem clearfix">
+            <div class="questionContent clearfix">
+                <div class="questionText">
+                    <div class="textContainer" onmouseover="showEditPanel_toggle(this)"></div>
+
+                    <p>
+                        为什么我这么帅？为什么我这么帅？为什么我这么帅？
+                        为什么我这么帅？为什么我这么帅？为什么我这么帅？为什么我这么帅？
+                    </p>
+
+                    <div class="fnBtnContainer" onmouseleave="showEditPanel_toggle(this)">
+                        <span class="editBtnContainer">
+                                <button class="editQuestion" value="1">edit</button>
+                                <button class="delQuestion" value="1">del</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="showAnswersBtn">
+                    <button class="showAnswers" onclick="showAnswerBtnClick_toggle(this)">show answers</button>
+                </div>
+            </div>
+        </div>
+        <div class="answersContainer clearfix">
+            <div class="answerBlock clearfix"><p class="answerIndex"><span>A</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+            <div class="answerBlock clearfix rightAnswer"><p class="answerIndex"><span>B</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+            <div class="answerBlock clearfix"><p class="answerIndex"><span>C</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+            <div class="answerBlock clearfix"><p class="answerIndex"><span>D</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+        </div>
+    </div>
+    <div class="questionItemContainer">
+        <div class="questionItem clearfix">
+            <div class="questionContent clearfix">
+                <div class="questionText">
+                    <div class="textContainer" onmouseover="showEditPanel_toggle(this)"></div>
+
+                    <p>
+                        为什么我这么帅？为什么我这么帅？为什么我这么帅？
+                        为什么我这么帅？为什么我这么帅？为什么我这么帅？为什么我这么帅？
+                    </p>
+
+                    <div class="fnBtnContainer" onmouseleave="showEditPanel_toggle(this)">
+                        <span class="editBtnContainer">
+                                <button class="editQuuestion">edit</button>
+                                <button class="delQuestion">del</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="showAnswersBtn">
+                    <button class="showAnswers" onclick="showAnswerBtnClick_toggle(this)">show answers</button>
+                </div>
+            </div>
+        </div>
+        <div class="answersContainer clearfix">
+            <div class="answerBlock clearfix"><p class="answerIndex"><span>A</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+            <div class="answerBlock clearfix rightAnswer"><p class="answerIndex"><span>B</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+            <div class="answerBlock clearfix"><p class="answerIndex"><span>C</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+            <div class="answerBlock clearfix"><p class="answerIndex"><span>D</span></p><p class="answerContent">天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！天生的没办法啊！</p></div>
+        </div>
+    </div>
     <div class="questionItemContainer">
         <div class="questionItem clearfix">
             <div class="questionContent clearfix">
@@ -86,5 +140,13 @@
         </div>
     </div>
 </div>
+
+<script src="../js/clazz.js"></script>
+<script src="../js/onLoad.js"></script>
+<script src="../js/testFile.js"></script>
+<script src="../js/btnFn.js"></script>
+<script src="../js/animate.js"></script>
+<script src="../js/addQuestion.js"></script>
+<script src="../js/mainContainer.js"></script>
 </body>
 </html>

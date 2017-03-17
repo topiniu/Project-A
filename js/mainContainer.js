@@ -2,12 +2,21 @@
  * Created by topiniu on 2017/3/16 0016.
  */
 //第一次执行展开答案时没有动画效果，因为没有给定height初始值，因为内容高度是不确定的，所以最好有一个初始化函数给每个questionItemConteiner的height赋初值
-var showABC_T = 0;
+// var showABC_T = 0;
+function initQuestionItemContainerHeight(){
+    var items = document.getElementsByClassName("questionItemContainer");
+
+    for(var i=0;i<items.length;i++){
+        var questionContent = items[i].getElementsByClassName("questionContent")[0];
+
+        items[i].style.height = questionContent.offsetHeight+4+"px";
+    }
+}
 function showAnswerBtnClick_toggle(e){
     // alert(e);
 
-    var qContent = e.parentNode.parentNode;
-    var qItem = qContent.parentNode.parentNode;//showAnswersBtn--questionContent--questionItem
+    var qContent = e.parentNode.parentNode;//==.showAnswersBtn ==.questionContent
+    var qItem = qContent.parentNode.parentNode;//== .questionItem  == .questionItemContainer
 
     var qContentHeight = qContent.offsetHeight;
     var qItemHeight = qItem.offsetHeight-4;
@@ -16,11 +25,11 @@ function showAnswerBtnClick_toggle(e){
     console.log(qContentHeight + "  " + qItemHeight);
 
     if(qContentHeight == qItemHeight){//show answers
-        if(showABC_T===0){//the first time excute this animate
-            //如果这是第一次点击show answer按钮，为了避免answer container没有初始height导致动画效果无法执行，在这里给它赋初值
-            qItem.style.height = qContentHeight+4+"px";
-            showABC_T=1;
-        }
+        // if(showABC_T===0){//the first time excute this animate
+        //     //如果这是第一次点击show answer按钮，为了避免answer container没有初始height导致动画效果无法执行，在这里给它赋初值
+        //     qItem.style.height = qContentHeight+4+"px";
+        //     showABC_T=1;
+        // }
         // alert(0);
         // alert(qItem.className);
         var aContainer = qItem.getElementsByClassName("answersContainer")[0];

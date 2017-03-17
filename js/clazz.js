@@ -42,4 +42,7 @@ Question.prototype.showSelf = function(){
     for(var i=0;i<this._rightAnswers.length;i++){
         console.log(this._rightAnswers[i]);
     }
+
+
+    console.log("\n\n")
 }
