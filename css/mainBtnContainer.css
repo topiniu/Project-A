@@ -1,23 +1,27 @@
 html,body{
     font-family: 'Roboto', sans-serif;
+    /*font-weight: lighter;*/
 }
 #mainbtn_container{
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    position: fixed;
+    right:5%;
+    bottom:5%;
+
+    transition: all 1s;
+
 }
 
 #mainbtn_container #btnContainer button{
     display: block;
-    width:200px;
+    width:100px;
     height:60px;
-    margin-bottom:20px;
+    /*margin-bottom:20px;*/
     
     background-color: black;
     color: #ffffff;
     cursor: pointer;
     border:2px black solid;
+    border-radius:10px;
     font-size:20px;
 
     transition: all .5s;
@@ -46,3 +50,4 @@ html,body{
     font-size:20px;
     margin:12px;
 }
+

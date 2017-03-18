@@ -2,13 +2,17 @@
  * Created by topiniu on 2017/3/9.
  */
 var QUESTIONDATA = [];
+var mainContainer = document.getElementById("mainContainer");
+var nodataBoxflag = 0;//用来验证nodatabox是否存在
 window.onload = function() {
 
     bindFn();
-    initQuestionItemContainerHeight();
 
-    testData();
+    // testData();
+
+
     onLoad();
+    initQuestionItemContainerHeight();
 }
 function bindFn(){
 
@@ -114,12 +118,25 @@ function bindFn(){
 
 }
 function onLoad(){
+    // alert(QUESTIONDATA);
+    if(QUESTIONDATA.length===0){
+        // alert("no any data here");
+        var div = document.createElement("div");
+        div.innerHTML = "Here is no data any more,you can press the add question button to add a new question."
+        div.classList.add("noDataBox");
+
+        mainContainer.appendChild(div);
+
+        nodataBoxflag=1;//表明nodatabox存在
+        return;
+    }
+
+    // alert("QUESTIONDATA lrngth is not 0");
     for(var x in QUESTIONDATA){
         // QUESTIONDATA[x].showSelf();
         createQItem(QUESTIONDATA[x]._content,x,QUESTIONDATA[x]._answers,QUESTIONDATA[x]._rightAnswers);
     }
 }
-var mainContainer = document.getElementById("mainContainer");
 
 function createQItem(content,index,answers,rightAnswers){
     // alert(mainContainer.innerHTML);
@@ -149,14 +166,15 @@ function createQItem(content,index,answers,rightAnswers){
 
 
     var p = document.createElement("p");
-    alert(content);
+    // alert(content);
     p.innerText = content;
 
     var textContainer = document.createElement("div");
+    textContainer.classList.add("textContainer");
     textContainer.setAttribute("onmouseover","showEditPanel_toggle(this)");
 
     var questionText = document.createElement("div");
-    questionText.classList.add("questionText")
+    questionText.classList.add("questionText");
 
     questionText.appendChild(textContainer);
     questionText.appendChild(p);
@@ -228,6 +246,12 @@ function createQItem(content,index,answers,rightAnswers){
     questionItemContainer.appendChild(questionItem);
     questionItemContainer.appendChild(answersContainer);
     questionItemContainer.classList.add("questionItemContainer");
+
+    if(nodataBoxflag===1){
+        var i = mainContainer.getElementsByClassName("noDataBox")[0];
+        mainContainer.removeChild(i);
+        nodataBoxflag=0;
+    }
 
     mainContainer.appendChild(questionItemContainer);
 }

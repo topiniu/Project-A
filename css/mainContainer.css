@@ -1,19 +1,15 @@
-#mainbtn_container{
-    display: none;
-}
 
 #mainContainer{
+
     position: absolute;
-
-    width:850px;
-
-    left:50%;
-    margin-left:-425px;
-    top:50px;
-
-    /*text-align: center;*/
-
-    background-color: antiquewhite;
+    width: 100%;
+    height: 100%;
+    /* left: 50%; */
+    /* margin-left: -425px; */
+    /* top: 50px; */
+    /* text-align: center; */
+    /* background-color: antiquewhite; */
+    transition: all 1s;
 }
 #mainContainer .questionItemContainer{
     width: 100%;
@@ -21,6 +17,7 @@
     /*height:.questionItem.height+.answersContainer.height;*/
     overflow: hidden;
 
+    margin-top:1%;
     transition: all .3s;
 }
 #mainContainer .questionItem{
@@ -195,4 +192,19 @@
 
 #mainContainer .questionContent .questionText p{
     padding: 0 10px 0 10px;
+}
+
+.noDataBox{
+    position: absolute;
+    width:50%;
+    font-size:30px;
+    font-weight: bold;
+
+    color: black;
+
+    top:35%;
+    text-align: center;
+    left:50%;
+
+    transform: translate(-50%,-50%);
 }

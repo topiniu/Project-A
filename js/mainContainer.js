@@ -4,6 +4,7 @@
 //第一次执行展开答案时没有动画效果，因为没有给定height初始值，因为内容高度是不确定的，所以最好有一个初始化函数给每个questionItemConteiner的height赋初值
 // var showABC_T = 0;
 function initQuestionItemContainerHeight(){
+    //本来是采用下面那种方法，但是后来发现对于动态加载question来说不起作用，所以干脆弄个函数直接循环给所有的item高度赋初值
     var items = document.getElementsByClassName("questionItemContainer");
 
     for(var i=0;i<items.length;i++){
@@ -22,7 +23,7 @@ function showAnswerBtnClick_toggle(e){
     var qItemHeight = qItem.offsetHeight-4;
 
 
-    console.log(qContentHeight + "  " + qItemHeight);
+    // console.log(qContentHeight + "  " + qItemHeight);
 
     if(qContentHeight == qItemHeight){//show answers
         // if(showABC_T===0){//the first time excute this animate
@@ -52,21 +53,6 @@ function showAnswerBtnClick_toggle(e){
     }
 
 }
-
-// function sAnswersBtn_hover_toggle(e){
-//     var backC = e.;
-//     alert(e.className);
-//     alert(backC);
-//     if(backC==="black"){
-//         e.style.backgroundColor = "white";
-//         e.style.color = "black";
-//     }else{
-//
-//         e.style.backgroundColor = "black";
-//         e.style.color = "white";
-//     }
-// }
-
 
 
 function showEditPanel_toggle(e){
