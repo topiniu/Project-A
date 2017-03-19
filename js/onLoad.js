@@ -8,7 +8,7 @@ window.onload = function() {
 
     bindFn();
 
-    // testData();
+    testData();
 
 
     onLoad();
@@ -134,17 +134,25 @@ function onLoad(){
     // alert("QUESTIONDATA lrngth is not 0");
     for(var x in QUESTIONDATA){
         // QUESTIONDATA[x].showSelf();
-        createQItem(QUESTIONDATA[x]._content,x,QUESTIONDATA[x]._answers,QUESTIONDATA[x]._rightAnswers);
+        createQItem(
+            QUESTIONDATA[x]._content,
+            QUESTIONDATA[x]._id,
+            QUESTIONDATA[x]._answers,
+            QUESTIONDATA[x]._rightAnswers,
+            x
+        );
     }
 }
 
-function createQItem(content,index,answers,rightAnswers){
+function createQItem(content,id,answers,rightAnswers,index){
     // alert(mainContainer.innerHTML);
+    //从里到外
 
     var editQuestion = document.createElement("button");
     editQuestion.innerHTML = "edit";
     editQuestion.classList.add("editQuestion");
     editQuestion.setAttribute("value",index);
+    editQuestion.setAttribute("onclick","editQuestion(this)");
 
     var delQuestion = document.createElement("button");
     delQuestion.innerHTML = "del";
@@ -153,6 +161,7 @@ function createQItem(content,index,answers,rightAnswers){
 
     var editeBtnContainer = document.createElement("span");
     editeBtnContainer.classList.add("editBtnContainer");
+    editeBtnContainer.setAttribute("data-id",id);
 
     var fnBtnContainer = document.createElement("div");
     fnBtnContainer.classList.add("fnBtnContainer");
@@ -179,7 +188,7 @@ function createQItem(content,index,answers,rightAnswers){
     questionText.appendChild(textContainer);
     questionText.appendChild(p);
     questionText.appendChild(fnBtnContainer);
-/////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////
     var showAnswers = document.createElement("button");
     showAnswers.innerHTML = "show answers";
     showAnswers.classList.add("showAnswers");
@@ -209,9 +218,10 @@ function createQItem(content,index,answers,rightAnswers){
     answersContainer.classList.add("answersContainer");
     answersContainer.classList.add("clearfix");
 
-    //生成answer block！
     var flagIndex = 0;
     var aIndex = 65;
+
+    //生成answer block！
     for(var x in answers){
 
         var span = document.createElement("span");
@@ -231,7 +241,8 @@ function createQItem(content,index,answers,rightAnswers){
         answerBlock.classList.add("answerBlock");
         answerBlock.classList.add("clearfix");
 
-        if(rightAnswers[flagIndex] === String.fromCharCode(aIndex++)){//如果这个选项跟正确答案数组的选项相同就加上正确答案样式（保证正确答案也是按照顺序排列）
+        if(rightAnswers[flagIndex] === String.fromCharCode(aIndex++)){
+            //如果这个选项跟正确答案数组的选项相同就加上正确答案样式（保证正确答案也是按照顺序排列）
             answerBlock.classList.add("rightAnswer");
             flagIndex++;
         }

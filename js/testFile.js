@@ -8,6 +8,7 @@ function testData() {
     var r = ["A", "C"]
 
     var q = new Question(c, a, r);
+    q.buildId();
 
     QUESTIONDATA.push(q);
 
@@ -16,6 +17,7 @@ function testData() {
     r = ["B"];
 
     q = new Question(c, a, r);
+    q.buildId();
 
     QUESTIONDATA.push(q);
 
@@ -24,6 +26,7 @@ function testData() {
     r = ["C"];
 
     q = new Question(c, a, r);
+    q.buildId();
 
     QUESTIONDATA.push(q);
 }

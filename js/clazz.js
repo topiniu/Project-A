@@ -4,6 +4,7 @@
 
 //调查问卷类--构造器加原型模式实现
 function Question(content,answers,rightAnswers){
+    this._id = "";
     this._content = content;
     this._answers = answers;
     this._rightAnswers = rightAnswers;
@@ -28,7 +29,25 @@ Question.prototype.showAllAnswer = function(){
 //对rightAnswers操作函数
 Question.prototype.editRightAnswers = function(rightAnswers){
     this._rightAnswers = rightAnswers;
-}
+};
+
+//生成id
+Question.prototype.buildId = function(){
+
+    var d = new Date();
+
+        this._id =QUESTIONDATA.length +
+            d.getYear() + "." +
+            d.getMonth() +
+            "." + d.getDay() +
+            "." + d.getHours() +
+            "." + d.getMinutes() +
+            "." + d.getSeconds() +
+            "." + d.getMilliseconds();
+
+
+    // alert(this._id);
+};
 
 Question.prototype.showSelf = function(){
     console.log("Qusetion= " + this._content);
@@ -45,4 +64,4 @@ Question.prototype.showSelf = function(){
 
 
     console.log("\n\n")
-}
+};

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            width:100px;
+            height:20px;
+
+            border:2px solid black;
+
+            overflow: auto;
+        }
+
+        button{
+            display: block;
+            width:50px;
+            height:50px;
+
+            background-color: black;
+            color: #ffffff;
+
+            border:2px solid black;
+
+            transition: all .3s;
+        }
+
+        button:hover{
+            background-color: white;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="textbox"/>
+<div id="a" data-id="1234">
+
+</div>
+<input type="checkbox" id="d" value="sss">
+<!--<button id="a" onclick="add()">1</button>-->
+
+<script>
+    var i = document.getElementById("d");
+    i.checked = true;
+//    var box = document.getElementById("textbox");
+//    var i = 0;
+//    function add(){
+//        box.value+= i++;
+//        box.focus();
+//    }
+//    var d = new Date();
+//    alert(d.getYear() + "." +
+//        d.getMonth() +
+//        "." + d.getDay() +
+//        "." + d.getHours() +
+//        "." + d.getMinutes() +
+//        "." + d.getSeconds() +
+//        "." + d.getMilliseconds());
+//    alert(document.getElementById("a").getAttribute("data-id"));
+</script>
+</body>
+</html>
