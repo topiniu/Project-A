@@ -6,6 +6,7 @@
 var addQflag = 0;//用来验证用户是否点击了添加按钮
 var createAnswerFlag = 66;//from B
 function createAnotherAnswer(index){
+    // alert(1);
     if(index!=-1){
         createAnswerFlag = index;
     }
@@ -24,7 +25,7 @@ function createAnotherAnswer(index){
     var input_checkbox = document.createElement("input");
     input_checkbox.type = "checkbox";
     input_checkbox.value = answerIndex;
-    input_checkbox.name = "rightAnswers";
+    input_checkbox.name = "answerCheckBox";
 
     var div = document.createElement("div");
     div.className = "answerBox";
@@ -32,7 +33,7 @@ function createAnotherAnswer(index){
     div.appendChild(input);
     div.appendChild(input_checkbox);
 
-    var form = document.getElementById("form");
+    var form = document.getElementById("addQuestionForm");
     form.appendChild(div);
 
     form.scrollTop = form.scrollHeight;
@@ -80,14 +81,14 @@ function addBtnClick(){
 
 
     var flag = false;//a flag to votify this question have a answer and right answer or not.
-    var questionContent = document.getElementById("questionContent").value;
+    var questionContent = document.getElementById("addQuestionContent").value;
     if(questionContent==""){//use =="" to votify if the input box is null
         alert("please type your question in the Question box.")
         return;
     }
 
     var answerList = [];
-    var answers = document.getElementsByClassName("answer");
+    var answers = document.getElementById("addQuestionForm").getElementsByClassName("answer");
     for(var i=0;i<answers.length;i++){
         if(answers[i].value != ""){//check this input box;if it is null,then do not add it to data
             answerList.push(answers[i].value);
@@ -102,7 +103,7 @@ function addBtnClick(){
 
     flag = false;
     var rightAnswers = [];
-    var checkBox = document.getElementsByName("rightAnswers");
+    var checkBox = document.getElementsByName("answerCheckBox");
     for(var i=0;i<checkBox.length;i++){
         if(checkBox[i].checked) {
             var brotherNode = document.getElementsByName("Answer_" + checkBox[i].value)[0];
@@ -132,7 +133,7 @@ function addBtnClick(){
 }
 
 function emptyAddPanel(){
-    document.getElementById("questionContent").value = "";
+    document.getElementById("addQuestionContent").value = "";
     while(document.getElementsByClassName("answerBox").length!=0)
     {
         var answers = document.getElementsByClassName("answerBox");

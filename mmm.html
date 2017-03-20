@@ -33,31 +33,13 @@
     </style>
 </head>
 <body>
-<input type="text" id="textbox"/>
-<div id="a" data-id="1234">
-
-</div>
-<input type="checkbox" id="d" value="sss">
-<!--<button id="a" onclick="add()">1</button>-->
-
+<textarea id="text"></textarea>
+<button onclick="a()">dsds</button>
 <script>
-    var i = document.getElementById("d");
-    i.checked = true;
-//    var box = document.getElementById("textbox");
-//    var i = 0;
-//    function add(){
-//        box.value+= i++;
-//        box.focus();
-//    }
-//    var d = new Date();
-//    alert(d.getYear() + "." +
-//        d.getMonth() +
-//        "." + d.getDay() +
-//        "." + d.getHours() +
-//        "." + d.getMinutes() +
-//        "." + d.getSeconds() +
-//        "." + d.getMilliseconds());
-//    alert(document.getElementById("a").getAttribute("data-id"));
+    function a(){
+        alert(document.getElementById("text").value);
+
+    }
 </script>
 </body>
 </html>

@@ -44,8 +44,6 @@ function changeExitBtn(i,exitBtn){
 
 }
 function showPanel(panelId){
-
-
     var panelContainer = document.getElementById("panelContainer");
 
     panelContainer.style.zIndex = "1";
@@ -103,7 +101,6 @@ function hidePanel(exitBtn){
         //用户单击过addbutton，重新加载数据，并归位flag
         // alert("onload will excute");
         onLoad();
-        initQuestionItemContainerHeight();
 
         addQflag=0;
     }

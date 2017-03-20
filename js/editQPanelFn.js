@@ -36,7 +36,7 @@ function editQuestion(editBtn){
         }
     }
 
-    updateButton.setAttribute("onclick","updateQuestion(" + qId + ")");
+    updateButton.setAttribute("onclick","updateQuestion('" + qId + "')");
 
     updateButton.style.transition = "all .2s";
     setTimeout(function(){
@@ -88,6 +88,8 @@ function loadContent(content,id,answers,rightAnswers){
         input2.setAttribute("type","checkbox");
         input2.value = String.fromCharCode(answerIndex);
 
+        input2.classList.add("answerCheckBox");
+
         if(rightAnswers[rightAnswerIndex] === String.fromCharCode(answerIndex++)){
             input2.checked = true;
             rightAnswerIndex++;
@@ -101,6 +103,45 @@ function loadContent(content,id,answers,rightAnswers){
     }
 
 
+}
+function updateQuestion(qID){
+    // alert(qID);
+    var editForm = document.getElementById("editQuestionForm");
+    var qContent = editForm.getElementsByClassName("questionContent")[0].value;
 
-    // mainForm.appendChild(div2);
+    var answers = editForm.getElementsByClassName("answer");
+    // alert(answers.length);
+    var checkBox = editForm.getElementsByClassName("answerCheckBox");
+    // alert(checkBox.length);
+
+
+    var qAnswers = [];
+    var qRightAnswers = [];
+
+    for(var i=0;i<answers.length;i++){
+        qAnswers.push(answers[i].value);
+    }
+
+    for(var i=0;i<checkBox.length;i++){
+        if(checkBox[i].checked){
+            alert(checkBox[i].value);
+            qRightAnswers.push(checkBox[i].value);
+        }
+    }
+
+    for(var x in QUESTIONDATA){
+        if(QUESTIONDATA[x]._id === qID){
+            QUESTIONDATA[x]._content = qContent;
+            QUESTIONDATA[x]._answers = qAnswers;
+            QUESTIONDATA[x]._rightAnswers = qRightAnswers;
+        }
+    }
+
+    //reload the html after update
+
+    mainForm.innerHTML = "";//empty the panel
+
+    hidePanel(editPanel.getElementsByClassName("exitBtn")[0]);
+
+    onLoad();
 }
