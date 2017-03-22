@@ -158,6 +158,7 @@ function createQItem(content,id,answers,rightAnswers,index){
     var delQuestion = document.createElement("button");
     delQuestion.innerHTML = "del";
     delQuestion.classList.add("delQuestion");
+    delQuestion.setAttribute("onclick","delQuestion('" + id + "')");
     delQuestion.setAttribute("value",index);
 
     var editeBtnContainer = document.createElement("span");
