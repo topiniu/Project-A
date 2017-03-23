@@ -5,60 +5,6 @@
 
 var addQflag = 0;//用来验证用户是否点击了添加按钮
 var createAnswerFlag_addPanel = 66;//from B
-function createAnotherAnswer(index,toPanel){
-    // alert(1);
-    var flag = 0;
-    if(index!=-1){
-        flag = index;//强制按照参数添加answerbox
-    }else {
-        //维护addpanel和editepanel两个全局变量
-        if(toPanel==="editQuestionForm"){
-            flag = createAnswerFlag_editPanel;
-        }else{
-            flag = createAnswerFlag_addPanel;
-        }
-    }
-
-    // alert(flag);
-
-    // alert(createAnswerFlag+ "   " + index);
-    var answerIndex = String.fromCharCode(flag);
-
-    var p = document.createElement("p");
-    p.innerHTML = "Answer " + answerIndex + ":";
-
-    var input = document.createElement("input");
-    input.type = "text";
-    input.className = "answer floatRight";
-    input.name = "Answer_" + answerIndex;
-    input.setAttribute("placeholder","here is answer " + answerIndex);
-
-    var input_checkbox = document.createElement("input");
-    input_checkbox.type = "checkbox";
-    input_checkbox.value = answerIndex;
-    input_checkbox.name = "answerCheckBox";
-
-    var div = document.createElement("div");
-    div.className = "answerBox";
-    div.appendChild(p);
-    div.appendChild(input);
-    div.appendChild(input_checkbox);
-
-    var form = document.getElementById(toPanel);
-    form.appendChild(div);
-
-
-
-    form.scrollTop = form.scrollHeight;
-    if(index==-1) {
-        if (toPanel === "editQuestionForm") {
-            createAnswerFlag_editPanel++;
-        } else {
-            createAnswerFlag_addPanel++;
-        }
-    }
-}
-
 
 function stopHandler(event) {
     window.event?window.event.cancelBubble=true:event.stopPropagation();

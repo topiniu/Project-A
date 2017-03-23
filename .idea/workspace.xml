@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa02427a-f96f-4287-a632-f535f6dfca03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/index.html" afterPath="$PROJECT_DIR$/html/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/addQPanelFn.js" afterPath="$PROJECT_DIR$/js/addQPanelFn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/editQPanelFn.js" afterPath="$PROJECT_DIR$/js/editQPanelFn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/panelFather.js" afterPath="$PROJECT_DIR$/js/panelFather.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,8 +31,8 @@
               <file leaf-file-name="editQPanelFn.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/js/editQPanelFn.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="474">
-                      <caret line="134" column="5" lean-forward="true" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+                    <state relative-caret-position="303">
+                      <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
                       <folding>
                         <element signature="e#0#43#0" expanded="false" />
                       </folding>
@@ -63,12 +62,26 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="addQPanelFn.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="addQPanelFn.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/js/addQPanelFn.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="765">
-                  <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+                <state relative-caret-position="114">
+                  <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="panelFather.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/js/panelFather.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="438">
+                  <caret line="133" column="41" lean-forward="true" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
+                  <folding>
+                    <element signature="n#!!doc;n#changeExitBtn#0" expanded="false" />
+                    <element signature="n#!!block;n#changeExitBtn#0" expanded="false" />
+                    <element signature="n#!!block;n#hidePanel#0" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -114,13 +127,13 @@
         <option value="$PROJECT_DIR$/js/bindFn.js" />
         <option value="$PROJECT_DIR$/js/testFile.js" />
         <option value="$PROJECT_DIR$/mmm.html" />
-        <option value="$PROJECT_DIR$/js/panelFather.js" />
         <option value="$PROJECT_DIR$/css/panel.css" />
         <option value="$PROJECT_DIR$/js/clazz.js" />
         <option value="$PROJECT_DIR$/js/onLoad.js" />
         <option value="$PROJECT_DIR$/html/index.html" />
-        <option value="$PROJECT_DIR$/js/addQPanelFn.js" />
         <option value="$PROJECT_DIR$/js/editQPanelFn.js" />
+        <option value="$PROJECT_DIR$/js/addQPanelFn.js" />
+        <option value="$PROJECT_DIR$/js/panelFather.js" />
       </list>
     </option>
   </component>
@@ -341,12 +354,12 @@
       <workItem from="1489852089255" duration="3648000" />
       <workItem from="1489893306134" duration="14539000" />
       <workItem from="1490291288188" duration="31000" />
-      <workItem from="1490291357569" duration="4533000" />
+      <workItem from="1490291357569" duration="4615000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35793000" />
+    <option name="totallyTimeSpent" value="35875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -663,18 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/panelFather.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="70" column="70" lean-forward="false" selection-start-line="70" selection-start-column="70" selection-end-line="70" selection-end-column="70" />
-          <folding>
-            <element signature="n#!!doc;n#changeExitBtn#0" expanded="false" />
-            <element signature="n#!!block;n#changeExitBtn#0" expanded="false" />
-            <element signature="n#!!block;n#hidePanel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/clazz.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -711,18 +712,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/addQPanelFn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="100" column="0" lean-forward="true" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+        <state relative-caret-position="114">
+          <caret line="6" column="43" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/editQPanelFn.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="134" column="5" lean-forward="true" selection-start-line="134" selection-start-column="5" selection-end-line="134" selection-end-column="5" />
+        <state relative-caret-position="303">
+          <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/panelFather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="133" column="41" lean-forward="true" selection-start-line="133" selection-start-column="41" selection-end-line="133" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc;n#changeExitBtn#0" expanded="false" />
+            <element signature="n#!!block;n#changeExitBtn#0" expanded="false" />
+            <element signature="n#!!block;n#hidePanel#0" expanded="false" />
           </folding>
         </state>
       </provider>
