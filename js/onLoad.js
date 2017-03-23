@@ -22,6 +22,7 @@ function onLoad(){
         var div = document.createElement("div");
         div.innerHTML = "Here is no data any more,you can press the add question button to add a new question."
         div.classList.add("noDataBox");
+        div.setAttribute("id","noDataBox");
 
         mainContainer.appendChild(div);
 
@@ -157,9 +158,9 @@ function createQItem(content,id,answers,rightAnswers,index){
     questionItemContainer.appendChild(answersContainer);
     questionItemContainer.classList.add("questionItemContainer");
 
-    if(nodataBoxflag===1){
-        var i = mainContainer.getElementsByClassName("noDataBox")[0];
-        mainContainer.removeChild(i);
+    if(document.getElementById("noDataBox") !== null){
+        // alert(document.getElementById("noDataBox"));
+        mainContainer.removeChild(document.getElementById("noDataBox"));
         nodataBoxflag=0;
     }
 
