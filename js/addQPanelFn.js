@@ -4,14 +4,25 @@
 
 
 var addQflag = 0;//用来验证用户是否点击了添加按钮
-var createAnswerFlag = 66;//from B
-function createAnotherAnswer(index){
+var createAnswerFlag_addPanel = 66;//from B
+function createAnotherAnswer(index,toPanel){
     // alert(1);
+    var flag = 0;
     if(index!=-1){
-        createAnswerFlag = index;
+        flag = index;//强制按照参数添加answerbox
+    }else {
+        //维护addpanel和editepanel两个全局变量
+        if(toPanel==="editQuestionForm"){
+            flag = createAnswerFlag_editPanel;
+        }else{
+            flag = createAnswerFlag_addPanel;
+        }
     }
+
+    // alert(flag);
+
     // alert(createAnswerFlag+ "   " + index);
-    var answerIndex = String.fromCharCode(createAnswerFlag++);
+    var answerIndex = String.fromCharCode(flag);
 
     var p = document.createElement("p");
     p.innerHTML = "Answer " + answerIndex + ":";
@@ -33,29 +44,21 @@ function createAnotherAnswer(index){
     div.appendChild(input);
     div.appendChild(input_checkbox);
 
-    var form = document.getElementById("addQuestionForm");
+    var form = document.getElementById(toPanel);
     form.appendChild(div);
 
+
+
     form.scrollTop = form.scrollHeight;
+    if(index==-1) {
+        if (toPanel === "editQuestionForm") {
+            createAnswerFlag_editPanel++;
+        } else {
+            createAnswerFlag_addPanel++;
+        }
+    }
 }
 
-
-//find node whinch one's id equals wantNodeId
-// function getExitBtnById(panelId){
-//     var nodes = document.getElementById(panelId).children;
-//     var node = null;
-//     for(var i=0;i<nodes.length;i++){
-//         if(nodes[i].className==="topbar"){
-//             var nodess = nodes[i].children;
-//             var j=0;
-//             for(;j<nodess.length;j++){
-//                 if(nodess[j].getAttribute("class")==="exitBtn")
-//                     node = nodess[j];
-//             }
-//         }
-//     }
-//     return node;
-// }
 
 function stopHandler(event) {
     window.event?window.event.cancelBubble=true:event.stopPropagation();
@@ -128,7 +131,10 @@ function addBtnClick(){
 
     showMessage("Your question has been added.");
 
-    setTimeout(emptyAddPanel,1000);
+    //重置answerindex
+    createAnswerFlag_addPanel=66;
+    // alert(createAnswerFlag_addPanel);
+    setTimeout(emptyAddPanel,500);
 
 }
 
@@ -140,5 +146,5 @@ function emptyAddPanel(){
         answers[0].remove();
     }
 
-    createAnotherAnswer(65);
+    createAnotherAnswer(65,'addQuestionForm');
 }

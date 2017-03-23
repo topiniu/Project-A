@@ -45,7 +45,7 @@
             </form>
 
             <div>
-                <button id="addAnswerBtn" onclick="createAnotherAnswer(-1)">add another answer</button>
+                <button id="addAnswerBtn" onclick="createAnotherAnswer(-1,'addQuestionForm')">add another answer</button>
                 <button id="saveQuestion" onclick="addBtnClick()">Save this</button>
             </div>
 
@@ -71,6 +71,7 @@
             </form>
 
             <div>
+                <button class="editQ_addNewAnswer" onclick="createAnotherAnswer(-1,'editQuestionForm')">add another question</button>
                 <button class="updateQuestion">Update this</button>
             </div>
         </div>

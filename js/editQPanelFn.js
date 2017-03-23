@@ -47,6 +47,7 @@ function editQuestion(editBtn){
 
     question.showSelf();
 }
+var createAnswerFlag_editPanel = 0;
 function loadContent(content,id,answers,rightAnswers){
 
     var answerIndex = 65;
@@ -69,6 +70,7 @@ function loadContent(content,id,answers,rightAnswers){
     mainForm.appendChild(div1);
 
     /////////////////////
+    createAnswerFlag_editPanel = answers.length+65;
 
     for(var x in answers){
         var div2 = document.createElement("div");
@@ -106,6 +108,8 @@ function loadContent(content,id,answers,rightAnswers){
 }
 function updateQuestion(qID){
     // alert(qID);
+    var flag = false;//验证编辑是否合格
+
     var editForm = document.getElementById("editQuestionForm");
     var qContent = editForm.getElementsByClassName("questionContent")[0].value;
 
@@ -119,14 +123,34 @@ function updateQuestion(qID){
     var qRightAnswers = [];
 
     for(var i=0;i<answers.length;i++){
-        qAnswers.push(answers[i].value);
+        if(answers[i].value != "") {//有答案且不为空
+            qAnswers.push(answers[i].value);
+            flag=true;
+        }
     }
 
+    if(!flag){
+        alert("Your qurstion does not have any answer,please check.")
+        return;
+    }
+
+    flag=false;
     for(var i=0;i<checkBox.length;i++){
         if(checkBox[i].checked){
             // alert(checkBox[i].value);
-            qRightAnswers.push(checkBox[i].value);
+            // var brotherNode = document.getElementsByName("Answer_" + checkBox[i].value)[0];
+            var brotherNode = checkBox[i].previousElementSibling;
+
+            if(brotherNode.value != "") {//check this answer check box's brother node; if its brotherNode's val is null,then do not add this answer to Data
+                qRightAnswers.push(checkBox[i].value);
+                flag=true;
+            }
         }
+    }
+
+    if(!flag){
+        alert("Your qurstion does not have any right answer,please check.")
+        return;
     }
 
     for(var x in QUESTIONDATA){
@@ -144,4 +168,12 @@ function updateQuestion(qID){
     hidePanel(editPanel.getElementsByClassName("exitBtn")[0]);
 
     onLoad();
+}
+
+
+function edit_addNewAnswer(answersLength){
+
+    var f = 65+answersLength;
+
+
 }
