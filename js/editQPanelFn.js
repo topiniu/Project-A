@@ -124,7 +124,7 @@ function updateQuestion(qID){
 
     for(var i=0;i<checkBox.length;i++){
         if(checkBox[i].checked){
-            alert(checkBox[i].value);
+            // alert(checkBox[i].value);
             qRightAnswers.push(checkBox[i].value);
         }
     }
