@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa02427a-f96f-4287-a632-f535f6dfca03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/addQPanelFn.js" afterPath="$PROJECT_DIR$/js/addQPanelFn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/panelFather.js" afterPath="$PROJECT_DIR$/js/panelFather.js" />
-    </list>
+    <list default="true" id="fa02427a-f96f-4287-a632-f535f6dfca03" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -354,12 +351,12 @@
       <workItem from="1489852089255" duration="3648000" />
       <workItem from="1489893306134" duration="14539000" />
       <workItem from="1490291288188" duration="31000" />
-      <workItem from="1490291357569" duration="4615000" />
+      <workItem from="1490291357569" duration="5017000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35875000" />
+    <option name="totallyTimeSpent" value="36277000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
