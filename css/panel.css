@@ -173,7 +173,7 @@ html,body{
 
     transition: all .5s;
 }
-.addAnswerBtn{
+#addAnswerBtn{
     width:79%;
 
     float: left;
@@ -182,15 +182,10 @@ html,body{
     border:1px solid #3c3c3c;
 
 }
-.addAnswerBtn:hover{
+#addAnswerBtn:hover{
     background-color: #3c3c3c;
     color: white;
 }
-.addAnswerBtn:active{
-    background-color: white;
-    color: #3c3c3c;
-}
-
 #saveQuestion{
     width:18%;
 
