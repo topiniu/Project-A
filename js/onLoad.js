@@ -10,7 +10,7 @@ window.onload = function() {
 
     // testData();
 
-
+    console.log(localStorage.getItem("loginedUser"));
     onLoad();
 }
 function onLoad(){
