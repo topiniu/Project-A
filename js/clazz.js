@@ -3,11 +3,12 @@
  */
 
 //调查问卷类--构造器加原型模式实现
-function Question(content,answers,rightAnswers){
+function Question(content,answers,rightAnswers,managerId){
     this._id = "";
     this._content = content;
     this._answers = answers;
     this._rightAnswers = rightAnswers;
+    this._managerId = managerId;
 };
 //对content操作函数
 Question.prototype.editContent = function(content){
