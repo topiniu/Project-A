@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project A</title>
+    <link rel="stylesheet" href="../css/mainBtnContainer.css">
+    <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/mainContainer.css">
+</head>
+<body>
+<div id="messageBox">
+    <p id="messageBoxContent"></p>
+</div>
+
+<div id="mainContainer">
+
+</div>
+
+
+<div id="mainbtn_container">
+
+    <div id="btnContainer">
+        <button id="addQuestion" onclick="showPanel('addFnPanel')">Add question</button>
+    </div>
+</div>
+
+<div id="panelContainer">
+    <div class="panel" id="addFnPanel">
+        <div class="topbar">
+            <p>Type and save your question</p>
+            <span class="exitBtn" onmouseover="changeExitBtn(1,this)"
+                  onmouseout="changeExitBtn(0,this)"
+                  onmousedown="changeExitBtn(-1,this)"
+                  onclick="hidePanel(this)">
+
+                <a class="i"></a>
+                <a class="i"></a>
+            </span>
+        </div>
+
+        <div class="mainBox">
+            <form class="form" id="addQuestionForm">
+                <div><p>Question:</p><textarea id="addQuestionContent" class="floatRight questionContent" name="questionContent" placeholder="type your question here"></textarea></div>
+                <div class="answerBox"><p>Answer A:</p><input type="text" class="answer floatRight" name="Answer_A" placeholder="here is answer A"> <input type="checkbox" value="A" name="answerCheckBox"></div>
+            </form>
+
+            <div>
+                <button id="addAnswerBtn" onclick="createAnotherAnswer(-1,'addQuestionForm')">add another answer</button>
+                <button id="saveQuestion" onclick="addBtnClick()">Save this</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="panel" id="editFnPanel">
+        <div class="topbar">
+            <p>Edit your question here</p>
+            <span class="exitBtn" onmouseover="changeExitBtn(1,this)"
+                  onmouseout="changeExitBtn(0,this)"
+                  onmousedown="changeExitBtn(-1,this)"
+                  onclick="hidePanel(this)">
+
+                <a class="i"></a>
+                <a class="i"></a>
+            </span>
+        </div>
+
+        <div class="mainBox">
+            <form class="form" id="editQuestionForm">
+
+            </form>
+
+            <div>
+                <button class="editQ_addNewAnswer" onclick="createAnotherAnswer(-1,'editQuestionForm')">add another question</button>
+                <button class="updateQuestion">Update this</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/clazz.js"></script>
+<script src="../js/addQPanelFn.js"></script>
+<script src="../js/onLoad.js"></script>
+<script src="../js/testFile.js"></script>
+<script src="../js/animate.js"></script>
+<script src="../js/mainContainer.js"></script>
+<script src="../js/panelFather.js"></script>
+<script src="../js/editQPanelFn.js"></script>
+<script src="../js/delQuestionFn.js"></script>
+</body>
+</html>

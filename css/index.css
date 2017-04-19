@@ -1,0 +1,53 @@
+*{
+    /*transition: all .5s;*/
+}
+h1{
+    margin:0;
+    color: #ffffff;
+}
+span{
+    display: block;
+    margin:20px;
+}
+.loginPanel{
+    display: inline-block;
+    width:460px;
+    border:1px solid black;
+}
+.loginPanel div:nth-child(1){
+    height:60px;
+    background-color: black;
+}
+.inputBox{
+
+    width: 300px;
+    height: 30px;
+    font-size: 1.2em;
+    float: right;
+}
+p{
+    display: inline-block;
+
+}
+.loginBtn{
+    float: right;
+}
+.messageBox{
+    display: inline;
+    color: #CC0000;
+    opacity: 0;
+    animation-duration: .3s;
+
+}
+
+@keyframes showHide {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
