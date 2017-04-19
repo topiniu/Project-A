@@ -10,7 +10,10 @@ window.onload = function() {
 
     // testData();
 
-    console.log(localStorage.getItem("loginedUser"));
+    if(localStorage.getItem("loginedManager")===null){
+        window.location.href = "index.html";
+    }
+
     onLoad();
 }
 function onLoad(){

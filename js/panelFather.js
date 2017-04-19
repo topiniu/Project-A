@@ -44,6 +44,7 @@ function changeExitBtn(i,exitBtn){
 
 }
 function showPanel(panelId){
+
     var panelContainer = document.getElementById("panelContainer");
 
     panelContainer.style.zIndex = "1";

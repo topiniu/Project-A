@@ -19,15 +19,15 @@
 }
 
 
-.btn-softBlue{
+.btn-blueMain{
     border:1px solid #009ACD;
     background-color: #009ACD;
 }
 
-.btn-softBlue:hover{
+.btn-blueMain:hover{
     color: #009ACD;
 }
-.btn-softBlue:active{
+.btn-blueMain:active{
     background-color: #00B2EE;
 }
 

@@ -13,7 +13,7 @@ function login(){
             messsBox.style.animationName = "";
         },3100);
     }else{
-        localStorage.setItem("loginedUser",idBox.value);
+        localStorage.setItem("loginedManager",new Manager(idBox.value,passBox.value));
         window.location.href = "Manager.html?backurl="+window.location.href;
     }
 }
