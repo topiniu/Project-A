@@ -5,7 +5,7 @@ function login(){
     var idBox = document.getElementById("idBox");
     var passBox = document.getElementById("passBox");
 
-    console.log(idBox.value);
+    // alert(idBox.value);
     if(idBox.value==="" || passBox.value===""){
         var messsBox = document.getElementsByClassName("messageBox")[0];
         messsBox.style.animationName = "showHide";
@@ -13,7 +13,7 @@ function login(){
             messsBox.style.animationName = "";
         },3100);
     }else{
-        localStorage.setItem("loginedManager",new Manager(idBox.value,passBox.value));
+        localStorage.setItem("loginedManagerID",idBox.value);
         window.location.href = "Manager.html?backurl="+window.location.href;
     }
 }

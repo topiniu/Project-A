@@ -8,11 +8,19 @@ function uploadData(){
     xhr.open("POST",url,true);
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4){
-            alert(xhr.responseText);
+            console.log(xhr.responseText);
         }
     }
-    // alert(QUESTIONDATA.length);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
-    console.log(QUESTIONDATA.toLocaleString());
-    xhr.send("data=" + QUESTIONDATA);
+
+    for(var q in QUESTIONDATA){
+        var item = QUESTIONDATA[q];
+        var data = {"id":item._id,
+            "content":item._content,
+            "answers":item._answers,
+            "rightAnswers":item._rightAnswers,
+            "managerId":item._managerId};
+
+        xhr.send("data="+data);
+    }
 }

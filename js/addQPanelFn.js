@@ -69,8 +69,13 @@ function addBtnClick(){
         return;
     }
 
-    var question = new Question(questionContent,answerList,rightAnswers);
+    if(window.localStorage.getItem("loginedManagerID") === null){
+        alert("please login.")
+        window.location.href="index.html";
+    }
+    var question = new Question(questionContent,answerList,rightAnswers,window.localStorage.getItem("loginedManagerID"));
     question.buildId();
+
 
     QUESTIONDATA.push(question);
     question.showSelf();
