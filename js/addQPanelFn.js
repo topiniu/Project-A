@@ -75,6 +75,8 @@ function addBtnClick(){
     QUESTIONDATA.push(question);
     question.showSelf();
 
+    uploadData();
+
     showMessage("Your question has been added.");
 
     //重置answerindex
@@ -83,7 +85,6 @@ function addBtnClick(){
     setTimeout(emptyAddPanel,500);
 
 }
-
 function emptyAddPanel(){
     document.getElementById("addQuestionContent").value = "";
     while(document.getElementsByClassName("answerBox").length!=0)

@@ -6,8 +6,8 @@
 function Question(content,answers,rightAnswers,managerId){
     this._id = "";
     this._content = content;
-    this._answers = answers;
-    this._rightAnswers = rightAnswers;
+    this._answers = answers;//Array
+    this._rightAnswers = rightAnswers;//Array
     this._managerId = managerId;
 };
 //对content操作函数
