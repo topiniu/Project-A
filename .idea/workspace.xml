@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa02427a-f96f-4287-a632-f535f6dfca03" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/dataUtil.js" afterPath="$PROJECT_DIR$/js/dataUtil.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -97,8 +96,8 @@
           <file leaf-file-name="dataUtil.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/dataUtil.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="371">
-                  <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+                <state relative-caret-position="546">
+                  <caret line="31" column="96" lean-forward="false" selection-start-line="31" selection-start-column="96" selection-end-line="31" selection-end-column="96" />
                   <folding>
                     <element signature="n#!!doc;n#uploadData#0" expanded="false" />
                   </folding>
@@ -403,12 +402,12 @@
       <workItem from="1492656551734" duration="671000" />
       <workItem from="1492726631138" duration="5934000" />
       <workItem from="1492758960770" duration="4381000" />
-      <workItem from="1493023337470" duration="3356000" />
+      <workItem from="1493023337470" duration="4060000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62064000" />
+    <option name="totallyTimeSpent" value="62768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -751,8 +750,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/dataUtil.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
+        <state relative-caret-position="546">
+          <caret line="31" column="96" lean-forward="false" selection-start-line="31" selection-start-column="96" selection-end-line="31" selection-end-column="96" />
           <folding>
             <element signature="n#!!doc;n#uploadData#0" expanded="false" />
           </folding>
