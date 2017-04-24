@@ -4,8 +4,10 @@
 
 function uploadData(){
     var xhr = new XMLHttpRequest();
-    var url = "http://localhost:8080/Project_B/ajax/addQuestion"
-    xhr.open("POST",url,true);
+    var addQurl = "http://localhost:8080/Project_B/ajax/addQuestion";
+    var addAurl = "http://localhost:8080/Project_B/ajax/addAnswers";
+    // var addRAurl = "http://localhost:8080/Project_B/ajax/addQuestion";
+    xhr.open("POST",addQurl,true);
     xhr.onreadystatechange = function(){
         if(xhr.readyState===4){
             console.log(xhr.responseText);
@@ -15,12 +17,17 @@ function uploadData(){
 
     for(var q in QUESTIONDATA){
         var item = QUESTIONDATA[q];
-        var data = {"id":item._id,
-            "content":item._content,
-            "answers":item._answers,
-            "rightAnswers":item._rightAnswers,
-            "managerId":item._managerId};
+        var data = "id=" + item._id+
+            "&content="+item._content+
+            "&managerId="+item._managerId;
+        xhr.send(data);
 
-        xhr.send("data="+data);
+        data ="answers="+item._answers+
+            "&rightAnswers="+item._rightAnswers+
+            "&questionId="+item._id;
+
+
+        xhr.open("POST",addAurl,true);
+        xhr.send(data);
     }
 }
