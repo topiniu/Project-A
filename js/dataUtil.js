@@ -33,3 +33,7 @@ function uploadData(){
         xhr.send(data);
     }
 }
+
+function loadData(){
+    var xhr = new XMLHttpRequest();
+}
