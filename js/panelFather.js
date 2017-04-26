@@ -160,3 +160,7 @@ function createAnotherAnswer(index,toPanel){
         }
     }
 }
+
+function about(){
+    alert("Self info");
+}
