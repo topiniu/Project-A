@@ -19,6 +19,7 @@ window.onload = function() {
 }
 function onLoad(){
     document.getElementById("mainContainer").innerHTML = "";
+    loadData();
 
     // alert(QUESTIONDATA);
     if(QUESTIONDATA.length===0){

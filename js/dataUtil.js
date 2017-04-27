@@ -35,5 +35,21 @@ function uploadData(){
 }
 
 function loadData(){
+    console.log("load data");
     var xhr = new XMLHttpRequest();
+
+    var loadQurl = "http://localhost:8080/Project_B/ajax/loadQuestion";
+    var loadAurl = "http://localhost:8080/Project_B/ajax/addAnswers";
+
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState===4){
+            console.log(xhr.responseText);
+        }
+    }
+
+    xhr.open("POST",loadQurl,false);
+
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=UTF-8");
+    xhr.send(null);
+
 }
