@@ -15,6 +15,21 @@ window.onload = function() {
 }
 function onLoad(){
     document.getElementById("mainContainer").innerHTML = "";
+    
+    // 插入路由
+    window.addEventListener('popstate',function(e){
+        console.log(e);
+        var panelId = '';
+        if(e.state && e.state.from === 'add'){
+            panelId = 'addFnPanel';
+            if(showingPanel !== panelId){
+                showPanel(panelId);
+            }
+            if(e.state && e.state.question){
+                
+            }
+        }
+    });
 
     // alert(QUESTIONDATA);
     if(QUESTIONDATA.length===0){

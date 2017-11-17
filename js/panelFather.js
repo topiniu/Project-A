@@ -43,6 +43,8 @@ function changeExitBtn(i,exitBtn){
     }
 
 }
+
+var showingPanel = '';
 function showPanel(panelId){
     var panelContainer = document.getElementById("panelContainer");
 
@@ -51,6 +53,21 @@ function showPanel(panelId){
 
     var fnPanel = document.getElementById(panelId);
     fnPanel.style.transform = "translate(-50%,-50%) scale(1)";
+    showingPanel = panelId;
+
+    // 插入路由
+    var url = '';
+    var act = '';
+    if(panelId === 'addFnPanel'){
+        url = '#/add';
+        act = 'add';
+    }else if(panelId === 'editFnPanel'){
+        url = '#/editFnPanel';
+        act = 'edit';
+    }
+    history.pushState({from:act},null,url);
+    // history.pushState(null,null,'');
+
 
     var exitBtn = fnPanel.getElementsByClassName("exitBtn")[0];
     var i = exitBtn.firstElementChild;
@@ -73,6 +90,9 @@ function showPanel(panelId){
 }
 
 function hidePanel(exitBtn){
+    // 插入路由
+    history.pushState(null,null,' ');
+    showingPanel = '';
 
     var i = exitBtn.firstElementChild;
     var ii = exitBtn.lastElementChild;

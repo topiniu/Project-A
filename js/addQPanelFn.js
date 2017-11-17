@@ -26,6 +26,7 @@ function showMessage(content){
 
 function addBtnClick(){
 
+
     addQflag=1;//用户点击了add按钮，那么推出add panel后就要加载数据
 
 
@@ -81,6 +82,9 @@ function addBtnClick(){
     createAnswerFlag_addPanel=66;
     // alert(createAnswerFlag_addPanel);
     setTimeout(emptyAddPanel,500);
+
+    // 插入路由
+    history.pushState({from:'added',question:question}, null, '#/add');
 
 }
 

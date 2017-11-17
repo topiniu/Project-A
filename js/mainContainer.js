@@ -53,8 +53,6 @@ function showAnswerBtnClick_toggle(e){
     }
 
 }
-
-
 function showEditPanel_toggle(e){
     var fnBtn = e.parentNode.getElementsByClassName("fnBtnContainer")[0];
     var fatherHeight = e.parentNode.offsetHeight;
