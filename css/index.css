@@ -1,53 +1,103 @@
 *{
     /*transition: all .5s;*/
 }
-h1{
-    margin:0;
-    color: #ffffff;
+body,html{
+    margin: 0;
+    padding: 0;
 }
-span{
-    display: block;
-    margin:20px;
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .loginPanel{
     display: inline-block;
-    width:460px;
-    border:1px solid black;
+    width:360px;
+    /* overflow: hidden; */
+    border-radius: 10px;
 }
-.loginPanel div:nth-child(1){
-    height:60px;
+.title-text{
+    color: white;
+    margin: 0;
+    /* margin-left: 20px; */
+    font-size: 24px;
+}
+.title-container{
+    /* width: 362px; */
     background-color: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: showHide 5s  infinite   ;
+    animation-direction: alternate;
+}
+.input-container{
+    padding: 20px 10px 10px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.input-container span p{
+    font-size: 14px;
+}
+.input-container span{
+    display: block;
+    /* margin:20px; */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    /* margin-top: 20px; */
 }
 .inputBox{
-
-    width: 300px;
+    width: 200px;
     height: 30px;
-    font-size: 1.2em;
+    font-size: 16px;
     float: right;
+    border-radius: 10px;
+    border: 1px solid black;
 }
-p{
-    display: inline-block;
 
-}
-.loginBtn{
-    float: right;
-}
 .messageBox{
     display: inline;
     color: #CC0000;
     opacity: 0;
     animation-duration: 3s;
-
 }
-
+.btn-container{
+    margin: 0;
+}
+.btn-container span{
+    margin: 0;
+}
+.btn-login{
+    background-color: #CC0000;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #CC0000;
+    transition: all .3s;
+    border-radius: 10px;
+}
+.btn-login:hover{
+    background-color: white;
+    color: #CC0000;
+}
 @keyframes showHide {
     0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
+        transform: scale(1.1);
     }
     100%{
-        opacity: 0;
+        transform: scale(0.9);
     }
 }
