@@ -6,8 +6,10 @@ function login(){
     var id = $('.j_idbox').val();
     var pass = $('.j_passbox').val();
 
-    if(id === 'topiniu' && pass == 'topiniu123')
-        window.location.href = 'html/manager.html'
+    if(id === 'topiniu' && pass == 'topiniu123'){
+        window.location.href = 'html/manager.html';
+        localStorage.setItem('loginedUser');
+    }
     else{
         $('.j_msgbox').html('wrong id or password');
         $('.j_msgbox').css('opacity',1);
