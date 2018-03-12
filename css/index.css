@@ -65,11 +65,16 @@ body,html{
     border: 1px solid black;
 }
 
-.messageBox{
-    display: inline;
+.btn-container .messageBox{
+    display: flex;
     color: #CC0000;
     opacity: 0;
     animation-duration: 3s;
+    transition: all 1s;
+    font-weight: bold;
+    justify-content: center;
+    align-items: end;
+    /* opacity: 1; */
 }
 .btn-container{
     margin: 0;
@@ -100,4 +105,18 @@ body,html{
     100%{
         transform: scale(0.9);
     }
+}
+
+.backimg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(3px);
+}
+
+.backimg img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }

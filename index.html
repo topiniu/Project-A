@@ -3,11 +3,16 @@
 <head>
     <title>Welcome to questionaire</title>
     <!-- <link rel="stylesheet" href="css/topiniu.css"> -->
+
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/zepto.js"></script>
     <script src="js/login.js"></script>
 </head>
 
 <body>
+        <div class="backimg">
+            <img src="assets/loginback.jpeg">
+        </div>
     <div class="container">
         <div class="loginPanel center-row clearfix">
             <div class="title-container">
@@ -15,14 +20,14 @@
             </div>
             <div class="input-container">
                 <span>
-                    <p>ID:</p><input type="text" id="idBox" class="inputBox" placeholder="Type questionaire's ID here." autofocus>
+                    <p>ID:</p><input type="text" id="idBox" class="inputBox j_idbox" placeholder="Type questionaire's ID here." autofocus>
                 </span>
                 <span>
-                    <p>PASSWORD:</p><input type="password" id="passBox" class="inputBox" placeholder="Type password here.">
+                    <p>PASSWORD:</p><input type="password" id="passBox" class="inputBox j_passbox" placeholder="Type password here.">
                 </span>
 
                 <div class="btn-container">
-                    <span class="messageBox center-col">
+                    <span class="messageBox center-col j_msgbox">
                         Wrong information
                     </span>
                     <a class="btn-login" onclick="login()">Enter</a>
